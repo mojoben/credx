@@ -1,12 +1,12 @@
-// reCAPTCHA (Enterprise, score-based), with the same rules as credco.co.uk's lib/recaptcha.ts:
+// reCAPTCHA (score-based), with the same rules as credco.co.uk's lib/recaptcha.ts:
 // refuse only on positive evidence of a bot (no token, a token minted for another action, or a
 // low score) and let everything else through (not configured, Google unreachable, or a token
 // Google won't validate, which almost always means a key/domain set-up problem and would
 // otherwise swallow every real enquiry).
 //
-// Verification, whichever is configured:
-//   RECAPTCHA_PROJECT_ID + RECAPTCHA_API_KEY  the reCAPTCHA Enterprise API (createAssessment)
-//   RECAPTCHA_SECRET_KEY                      the classic siteverify endpoint (a legacy secret)
+// Verification, whichever is configured (match RECAPTCHA_MODE in src/lib/config.ts):
+//   RECAPTCHA_SECRET_KEY                      classic siteverify (RECAPTCHA_MODE 'classic')
+//   RECAPTCHA_PROJECT_ID + RECAPTCHA_API_KEY  the Enterprise createAssessment API ('enterprise')
 import { RECAPTCHA_ACTION } from './rules';
 import { RECAPTCHA_SITE_KEY } from '../config';
 

@@ -5,7 +5,7 @@ GitHub → Coolify → the server, behind Traefik, container port **4321**. It's
 ## 1. Before the first deploy
 
 - **Resend (the same account as credco.co.uk):** Domains → Add `credx.co.uk`. Put the records it lists into the credx.co.uk DNS at **GoDaddy**. They're usually `MX send`, `TXT send` (SPF) and `TXT resend._domainkey` (DKIM). **Leave the existing root MX, SPF and DMARC records alone**: Microsoft 365 uses them for info@credx.co.uk. The domain's DMARC is `p=reject`, so emails from the form are **refused** until Resend shows the domain as **Verified**. Then create an API key, ideally with sending access limited to credx.co.uk.
-- **reCAPTCHA Enterprise:** the site key is already in `src/lib/config.ts`. In Google Cloud (Security → reCAPTCHA), make sure the key's domains include `credx.co.uk`, `www.credx.co.uk` and any temporary test domain. Then, in the same project, go to *APIs & Services → Credentials → Create credentials → API key* and restrict it to the **reCAPTCHA Enterprise API**. That key goes in `RECAPTCHA_API_KEY`, and the project ID (from the project picker) goes in `RECAPTCHA_PROJECT_ID`.
+- **reCAPTCHA:** the site key is already in `src/lib/config.ts`. In the reCAPTCHA admin, make sure the key's domains include `credx.co.uk`, `www.credx.co.uk` and any temporary test domain. Its secret key goes in `RECAPTCHA_SECRET_KEY`.
 
 ## 2. The Coolify application
 
@@ -26,8 +26,7 @@ GitHub → Coolify → the server, behind Traefik, container port **4321**. It's
 | Variable | Value |
 | --- | --- |
 | `RESEND_API_KEY` | from Resend |
-| `RECAPTCHA_PROJECT_ID` | the Google Cloud project the reCAPTCHA key is in |
-| `RECAPTCHA_API_KEY` | an API key from that project, restricted to the reCAPTCHA Enterprise API |
+| `RECAPTCHA_SECRET_KEY` | the secret key from the reCAPTCHA admin |
 | `MAIL_TO` | `info@credx.co.uk` (comma-separate for more than one) |
 | `MAIL_FROM` | `info@credx.co.uk` (must be on the verified domain) |
 
@@ -42,7 +41,7 @@ None of these are needed at build time, so changing one needs a restart, not a r
    node qa/golive-check.mjs
    ```
    They cover all 9 pages, the 404 page, the old WordPress redirects and 410s, the form endpoint and the assets.
-4. Send a real test enquiry from your own address. The notification should reach info@credx.co.uk, and the auto-reply should reach you. Then check the Runtime Logs: a line starting `[enquiry] reCAPTCHA` means the verification isn't set up right (wrong project or key, the API not enabled, or billing). Enquiries still go through while that's the case.
+4. Send a real test enquiry from your own address. The notification should reach info@credx.co.uk, and the auto-reply should reach you. Then check the Runtime Logs: a line starting `[enquiry] reCAPTCHA` means the verification isn't set up right (for example the wrong secret, or the domain isn't on the key). Enquiries still go through while that's the case.
 5. Google Search Console: submit `https://credx.co.uk/sitemap-index.xml`.
 
 **Rollback:** point the DNS `A` records back at `213.175.208.161`. WordPress is still there, untouched.

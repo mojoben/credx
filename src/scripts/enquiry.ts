@@ -1,8 +1,11 @@
 // Enquiry form: validates with the same messages Contact Form 7 used, lazy-loads reCAPTCHA
-// Enterprise (invisible, score-based) when the form comes near the screen, and submits to
-// /api/enquiry/ (src/pages/api/enquiry.ts) without a page reload.
+// (invisible, score-based) when the form comes near the screen, and submits to /api/enquiry/
+// (src/pages/api/enquiry.ts) without a page reload.
 
 import { MESSAGES, RECAPTCHA_ACTION, validate as validateRules } from '../lib/enquiry/rules';
+import { RECAPTCHA_MODE } from '../lib/config';
+
+const ENTERPRISE = RECAPTCHA_MODE === 'enterprise';
 
 type Recaptcha = {
   ready: (cb: () => void) => void;
@@ -10,7 +13,7 @@ type Recaptcha = {
 };
 declare global {
   interface Window {
-    grecaptcha?: { enterprise?: Recaptcha };
+    grecaptcha?: Recaptcha & { enterprise?: Recaptcha };
   }
 }
 
@@ -18,7 +21,7 @@ function loadCaptcha(key: string) {
   if (document.getElementById('recaptcha')) return;
   const s = document.createElement('script');
   s.id = 'recaptcha';
-  s.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(key)}`;
+  s.src = `https://www.google.com/recaptcha/${ENTERPRISE ? 'enterprise' : 'api'}.js?render=${encodeURIComponent(key)}`;
   s.async = true;
   document.head.append(s);
 }
@@ -26,7 +29,7 @@ function loadCaptcha(key: string) {
 /** A token for this submission, or undefined if Google's script is blocked or not loaded yet
  *  (the server decides what to do with a missing token). */
 async function captchaToken(key: string): Promise<string | undefined> {
-  const g = window.grecaptcha?.enterprise;
+  const g = ENTERPRISE ? window.grecaptcha?.enterprise : window.grecaptcha;
   if (!g) return undefined;
   try {
     await new Promise<void>((resolve) => g.ready(resolve));
