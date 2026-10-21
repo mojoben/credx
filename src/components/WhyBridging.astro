@@ -1,0 +1,35 @@
+---
+// Angled black panel: heading with a button, then either rich copy or a list.
+import { ENQUIRY, type Point } from '../lib/content';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  button: string;
+  /** the investment page uses the black button, the others the teal one */
+  dark?: boolean;
+  cols?: number;
+  html?: string;
+  list?: Point[];
+  boldTitles?: boolean;
+}
+const { title, button, dark = false, cols = 8, html, list, boldTitles = false } = Astro.props;
+---
+<section class="why-bridging panel angled skew-top">
+  <div class="container">
+    <Reveal type="up" class="head-row" style={`--cols:${cols}`}>
+      <div class="sec-heading"><h2>{title}</h2></div>
+      <div class="why-bridging-cta"><a href={ENQUIRY} class={dark ? 'thm-btn-1' : 'thm-btn'}>{button}</a></div>
+    </Reveal>
+    <Reveal type="up" class="why-bridging-cnt">
+      {html && <Fragment set:html={html} />}
+      {list && (
+        <ul>
+          {list.map((p) => (
+            <li>{boldTitles ? <><b set:html={p.title} /> <Fragment set:html={p.description} /></> : <Fragment set:html={p.title} />}</li>
+          ))}
+        </ul>
+      )}
+    </Reveal>
+  </div>
+</section>

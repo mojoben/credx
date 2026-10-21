@@ -1,0 +1,99 @@
+{
+  "id": 132,
+  "key": "investment",
+  "path": "/investment-property-and-development-finance/",
+  "title": "Investment Property & Development finance",
+  "template": "template/residential-bridging-finance.php",
+  "seo": {
+    "title": "Property Investment Bridging & Development Finance for Companies & SPVs | CredX",
+    "description": null
+  },
+  "content": "<p>Short-term property finance for corporate borrowers acquiring, refinancing or improving investment and development property. Funding is available only for business or investment purposes. CredX does not offer residential mortgages or loans to individual consumers.</p>\n<h4>What is Property Investment Bridging &amp; Development Finance?</h4>\n<p>It is a short-term facility that allows you to move quickly on an investment or development opportunity — for example an auction acquisition, a refurbishment, or a purchase that needs to complete before longer-term funding is in place. The facility is repaid from an agreed exit such as sale or refinance.</p>",
+  "fields": {
+    "banner_image_1": {
+      "src": "2025/09/Residential-Bridging-Finance.jpg",
+      "width": 1500,
+      "height": 1000,
+      "alt": ""
+    },
+    "banner_image_2": {
+      "src": "2025/09/Residential-Bridging-Finance-uk.jpg",
+      "width": 800,
+      "height": 533,
+      "alt": ""
+    },
+    "banner_title": "Property Investment Bridging & Development Finance for UK Companies & SPVs",
+    "bridging_finance_used_points": [
+      {
+        "title": "Investment Purchases: ",
+        "description": "Acquire an investment property before longer-term funding or a related sale completes."
+      },
+      {
+        "title": "Refurbishment & Light Development: ",
+        "description": "Fund works to a company-owned investment property before sale, refinance or letting."
+      },
+      {
+        "title": "Auction Acquisitions: ",
+        "description": "Complete a qualifying auction purchase within the required timetable."
+      },
+      {
+        "title": "Development Exit: ",
+        "description": "Short-term refinance of a completed scheme while units are sold or long-term funding is arranged."
+      }
+    ],
+    "bridging_finance_used_title": "When is Property Investment Bridging & Development Finance Used?",
+    "bridging_finance_works_with_credx_button_link": "#",
+    "bridging_finance_works_with_credx_data_box": [
+      {
+        "title": "Free Consultation",
+        "description": "Start by contacting us to discuss your Property Investment bridging needs. Our team will assess your situation and provide a tailored solution for your specific requirements."
+      },
+      {
+        "title": "Indicative Terms",
+        "description": "We review the security property, requested LTV, purpose and proposed exit and, where appropriate, issue indicative terms."
+      },
+      {
+        "title": "Fast Approval",
+        "description": "Once we’ve agreed on the terms, we’ll approve the loan quickly and arrange the transfer of funds."
+      },
+      {
+        "title": "Flexible Repayment Terms",
+        "description": "Repay the facility through the agreed exit — typically sale of the property or refinance onto longer-term funding."
+      }
+    ],
+    "bridging_finance_works_with_credx_title": "How the Facility Works",
+    "form_intro_text": "Available to Corporate Borrowers. CredX does not provide regulated residential mortgages or consumer credit to individuals.",
+    "key_benefits_points": [
+      {
+        "title": "Fast Decisions: ",
+        "description": "Indicative terms are typically issued within 24-48 hours."
+      },
+      {
+        "title": "Short-Term Facility: ",
+        "description": "Designed to be repaid within a short period (typically 6-12 months), offering flexibility during the transition period."
+      },
+      {
+        "title": "Transaction-Led Underwriting: ",
+        "description": "We assess the company, the security property and the proposed exit, rather than applying consumer credit scoring."
+      },
+      {
+        "title": "Loan Sizes: ",
+        "description": "Corporate property loans from £25,000 to £1 million, subject to valuation and underwriting."
+      }
+    ],
+    "key_benefits_title": "Key Features for Corporate Borrowers:",
+    "why_choose_residential_bridging_button_link": "#",
+    "why_choose_residential_bridging_points": [
+      {
+        "title": "Bespoke Solutions: As a boutique lender, we structure each facility around your specific needs"
+      },
+      {
+        "title": "Speed: We understand that time is of the essence. Our fast decision-making ensures you don’t miss out on opportunities."
+      },
+      {
+        "title": "Clear, Transparent Terms: No hidden fees or surprises. Terms are set out in full before the facility is drawn."
+      }
+    ],
+    "why_choose_residential_bridging_title": "Why Choose CredX for Property Investment Bridging & Development Finance?"
+  }
+}

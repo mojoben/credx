@@ -1,0 +1,184 @@
+/* Enquiry form (replaces Contact Form 7 + Bootstrap form styles). */
+
+.enquiry-cols {
+  --gx: 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--gx);
+}
+@media (min-width: 992px) {
+  .enquiry-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1199.98px) {
+  .enquiry-cols { --gx: 40px; }
+}
+
+.enquiry-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 24px;
+  align-content: start;
+}
+@media (min-width: 768px) {
+  .enquiry-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.field {
+  grid-column: 1 / -1;
+  margin: 0 0 24px;
+  min-width: 0;
+}
+.field.half {
+  grid-column: auto;
+}
+fieldset.field {
+  border: 0;
+  padding: 0;
+}
+
+.form-control,
+.form-select {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--black);
+  background-color: var(--white);
+  background-clip: padding-box;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  padding: 10px 20px;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out;
+}
+textarea.form-control {
+  border-radius: 30px;
+}
+.form-control::placeholder {
+  color: rgb(33 37 41 / 75%);
+  opacity: 1;
+}
+/* keep a field clear of the sticky header when it's focused after a failed submit */
+.enquiry input,
+.enquiry select,
+.enquiry textarea {
+  scroll-margin-top: 140px;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--theme);
+  outline: none;
+}
+.form-select {
+  padding: 10px 40px 10px 20px;
+  background-image: url('/images/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 20px 20px;
+}
+.form-select:invalid {
+  color: var(--black);
+}
+
+.form-check-label {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white);
+}
+.form-check-label + * {
+  clear: left;
+}
+.radio-row {
+  display: flex;
+  gap: 16px;
+  height: 20px;
+  padding-top: 4px;
+}
+.radio-row label,
+.check {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white);
+  cursor: pointer;
+}
+.radio-row input,
+.check input {
+  margin: 1px 0 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--cyan);
+}
+
+.enquiry-actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 24px;
+}
+.enquiry-submit {
+  text-align: right;
+}
+.enquiry-submit .thm-btn {
+  background-color: var(--cyan);
+  color: var(--white);
+}
+.enquiry-submit .thm-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+.enquiry-submit .thm-btn[aria-busy='true'] {
+  opacity: 0.6;
+  cursor: progress;
+}
+@media (min-width: 576px) {
+  .enquiry-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .enquiry-submit { grid-column: 2; }
+}
+/* 992-1199px: the button sits on its own row, as it did under the old captcha */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .enquiry-submit { grid-column: 1 / -1; }
+  .enquiry-submit .thm-btn { margin-top: 20px; }
+}
+@media (max-width: 575.98px) {
+  .enquiry-submit .thm-btn { margin-top: 20px; }
+}
+
+/* validation and result messages, as Contact Form 7 showed them */
+.field-error {
+  display: block;
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.radio-row + .field-error {
+  margin-top: 12px;
+}
+.enquiry-response {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #ffb900;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.enquiry-response.is-sent { border-color: #46b450; }
+.enquiry-response.is-failed { border-color: #dc3232; }
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

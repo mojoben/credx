@@ -1,0 +1,57 @@
+---
+// "Meet the Team" cards; "Read more" opens the full bio in a dialog.
+import type { Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  members: { name: string; role: string; description: string; modal_desription: string; image: ImgData }[];
+}
+const { title, html, members } = Astro.props;
+---
+<section class="meet-team panel angled skew-top">
+  <div class="container">
+    <div class="meet-team-head">
+      <Reveal type="up" class="sec-heading">
+        <h2>{title}</h2>
+        <Fragment set:html={html} />
+      </Reveal>
+    </div>
+    <div class="team-grid">
+      {members.map((m, i) => (
+        <Reveal delay={300 + i * 100} class="team-card">
+          <Img img={m.image} alt={m.name} sizes="(max-width: 991px) 90vw, 407px" widths={[400, 600, 820]} />
+          <h3>{m.name}</h3>
+          <span class="team-role">{m.role}</span>
+          <div class="team-card-bio" set:html={m.description} />
+          <button type="button" class="thm-btn" data-open-dialog={`team-${i}`} aria-haspopup="dialog">Read more</button>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
+
+{members.map((m, i) => (
+  <dialog class="team-dialog" id={`team-${i}`} aria-labelledby={`team-${i}-name`}>
+    <div class="team-dialog-wrap">
+    <div class="team-dialog-content">
+      <form method="dialog" class="team-dialog-close">
+        <button type="submit" aria-label="Close"><Icon name="xmark" /></button>
+      </form>
+      <div class="team-dialog-body">
+        <div class="team-dialog-img">
+          <Img img={m.image} alt={m.name} sizes="(max-width: 991px) 90vw, 290px" widths={[300, 580]} />
+        </div>
+        <div class="team-dialog-cnt">
+          <h3 id={`team-${i}-name`}>{m.name}</h3>
+          <span class="team-role">{m.role}</span>
+          <Fragment set:html={m.modal_desription} />
+        </div>
+      </div>
+    </div>
+    </div>
+  </dialog>
+))}

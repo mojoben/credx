@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import PageBanner from '../components/PageBanner.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('process');
+const f = p.fields;
+---
+<Base page="process" path={p.path} crumb={p.title}>
+  <main>
+    <PageBanner title={f.banner_title} html={p.content} image={f.banner_image} />
+    <ProcessSteps steps={f.our_process_data_box} note={f.our_process_note} buttonAfter />
+    <ContactSection intro={f.form_intro_text} />
+  </main>
+</Base>

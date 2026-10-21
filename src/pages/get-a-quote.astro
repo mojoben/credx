@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Introducing from '../components/Introducing.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('quote');
+const f = p.fields;
+---
+<Base page="quote" path={p.path} crumb={p.title}>
+  <main class="contact-main">
+    <ContactSection intro={f.form_intro_text} />
+    <Introducing title={f.quote_introducing_title} html={f.quote_introducing_description} image={f.image} />
+  </main>
+</Base>

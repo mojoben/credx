@@ -1,0 +1,318 @@
+/* Tokens, fonts, element defaults, buttons, layout primitives and reveal animations. */
+
+:root {
+  --theme: #fbbb4e;
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --cyan: #008189;
+  --grey-box: #f3f3f3;
+  --text: #212529;
+  --link: #0d6efd;
+  --link-hover: #0a58ca;
+  --line: #474544;
+  --radius: 30px;
+  --ease: 0.4s ease-in-out;
+}
+
+@font-face {
+  font-family: 'Aller Light';
+  src: url('/fonts/aller_light.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aller Regular';
+  src: url('/fonts/aller_regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aller Regular', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--white);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 { font-size: calc(1.375rem + 1.5vw); }
+h2 { font-size: calc(1.325rem + 0.9vw); }
+h3 { font-size: calc(1.3rem + 0.6vw); }
+h4 { font-size: calc(1.275rem + 0.3vw); }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+@media (min-width: 1200px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: 'Aller Light', sans-serif;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+ol ol, ul ul, ol ul, ul ol { margin-bottom: 0; }
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover);
+  transition: all var(--ease);
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  box-shadow: none;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type='submit'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+textarea {
+  resize: vertical;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--theme);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ icons */
+
+.icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  overflow: visible;
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.thm-btn,
+.thm-btn-1 {
+  font-size: 18px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--cyan);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  display: inline-block;
+}
+.thm-btn:hover {
+  color: var(--white);
+  background-color: var(--black);
+  transition: all var(--ease);
+}
+.thm-btn-1 {
+  background-color: var(--black);
+}
+.thm-btn-1:hover {
+  color: var(--white);
+  background-color: var(--cyan);
+  transition: all var(--ease);
+}
+@media (max-width: 575.98px) {
+  .thm-btn,
+  .thm-btn-1 {
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------------------------------------------ layout */
+
+.container {
+  width: 100%;
+  padding-inline: 12px;
+  margin-inline: auto;
+}
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+/*
+ * Two-column split from 992px. --cols is the first column's share in twelfths and --gap the
+ * gutter, sized so column widths match the old 12-column grid exactly.
+ */
+.split {
+  --cols: 6;
+  --gap: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 992px) {
+  .split {
+    grid-template-columns: calc((100% + var(--gap)) * var(--cols) / 12 - var(--gap)) minmax(0, 1fr);
+    column-gap: var(--gap);
+  }
+}
+
+/* Heading row with a call-to-action on the right (stacks below 992px). */
+.head-row {
+  --cols: 6;
+  --gap: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 50px;
+}
+.head-row > :last-child {
+  text-align: right;
+}
+@media (min-width: 992px) {
+  .head-row {
+    grid-template-columns: calc((100% + var(--gap)) * var(--cols) / 12 - var(--gap)) minmax(0, 1fr);
+    column-gap: var(--gap);
+    align-items: end;
+  }
+}
+
+/* Black panel inset 30px from the viewport edges (12px on phones). flow-root keeps child
+   margins inside it, as the old grid's flex rows did. */
+.panel {
+  display: flow-root;
+  width: calc(100% - 60px);
+  margin-inline: auto;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .panel {
+    width: calc(100% - 24px);
+  }
+}
+
+/*
+ * The angled black backdrop used behind several sections: two halves, one of them skewed.
+ * --top / --bottom set each half's height, --skew-at picks which half is skewed and --lift
+ * raises the bottom half.
+ */
+.angled::before,
+.angled::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-color: var(--black);
+}
+/* no `top`: like the original it sits at its static position, below any padding-top */
+.angled::before {
+  height: var(--top, 55%);
+  border-radius: 30px 30px 0 0;
+}
+.angled::after {
+  bottom: var(--lift, 0px);
+  height: var(--bottom, 55%);
+  border-radius: 0 0 30px 30px;
+}
+.angled.skew-bottom::after { transform: skewY(4deg); }
+.angled.skew-top::before { transform: skewY(4deg); }
+
+/* ------------------------------------------------------------------ reveal on scroll */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 100%, 0); }
+  to { opacity: 1; transform: translateZ(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  50% { opacity: 1; }
+}
+
+.reveal-on [data-reveal] {
+  visibility: hidden;
+}
+.reveal-on [data-reveal].is-in {
+  visibility: visible;
+  animation: 1s both;
+  animation-delay: var(--delay, 0ms);
+}
+.reveal-on [data-reveal='fade'].is-in { animation-name: fadeIn; }
+.reveal-on [data-reveal='up'].is-in { animation-name: fadeInUp; }
+.reveal-on [data-reveal='zoom'].is-in { animation-name: zoomIn; }

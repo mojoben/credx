@@ -1,0 +1,26 @@
+---
+import { ENQUIRY, type Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  image: ImgData;
+}
+const { title, html, image } = Astro.props;
+---
+<section class="hero">
+  <div class="hero-bg">
+    <Img img={image} sizes="100vw" widths={[1500]} class="hero-img" eager />
+    <Reveal class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <h1>{title}</h1>
+          <Fragment set:html={html} />
+          <a href={ENQUIRY} class="thm-btn">Check Eligibility</a>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import AboutIntro from '../components/AboutIntro.astro';
+import Points from '../components/Points.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import WhyBridging from '../components/WhyBridging.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('commercial');
+const f = p.fields;
+---
+<Base page="commercial" path={p.path} crumb={p.title}>
+  <main>
+    <AboutIntro title={f.banner_title} html={p.content} image1={f.banner_image_1} image2={f.banner_image_2} />
+    <Points title={f.why_choose_commercial_bridging_title} points={f.why_choose_commercial_bridging_points} />
+    <ProcessSteps title={f.bridging_finance_work_title} steps={f.bridging_finance_work_data_box} />
+    <Points title={f.commercial_bridging_finance_used_title} points={f.commercial_bridging_finance_used_points} />
+    <WhyBridging
+      title={f.why_choose_commercial_bridging_finance_title}
+      button="Start Your Commercial Bridging Application Today"
+      cols={6}
+      list={f.why_choose_commercial_bridging_finance_points}
+      boldTitles
+    />
+    <ContactSection intro={f.form_intro_text} />
+  </main>
+</Base>

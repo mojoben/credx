@@ -1,0 +1,64 @@
+{
+  "name": "Credx",
+  "tagline": "Bespoke Bridging Finance Solutions Across the UK",
+  "url": "https://credx.co.uk",
+  "theme": {
+    "footer_logo": {
+      "src": "2025/08/logo.svg",
+      "width": null,
+      "height": null,
+      "alt": ""
+    },
+    "get_in_touch_form_sub_heading": "Or fill in the form below, and we’ll get<br>back to you as soon as possible.",
+    "header_email": "info@credx.co.uk",
+    "header_logo": {
+      "src": "2025/08/logo.svg",
+      "width": null,
+      "height": null,
+      "alt": ""
+    },
+    "header_mobile_no": "07903 659 305",
+    "header_text": "<p>CredX provides unregulated business-purpose property finance exclusively to corporate borrowers.  We do not provide regulated residential mortgages or any form of consumer credit lending.</p>"
+  },
+  "contact": {
+    "title": "Get in Touch with Credx",
+    "description": "<p>Ready to discuss your bridging finance needs? We’re here to help. Contact us today to speak with a member of our team.</p>",
+    "phone": "07903 659 305",
+    "email": "info@credx.co.uk",
+    "address": "Credx, Suite 13, Regus, Admirals Park, Victory Way, Dartford, DA2 6QD"
+  },
+  "menus": {
+    "primary": [
+      {
+        "title": "Bridging Finance",
+        "href": "/bridging-finance-for-auction-property-purchases/"
+      },
+      {
+        "title": "Commercial Bridging Finance",
+        "href": "/commercial-bridging-finance/"
+      },
+      {
+        "title": "Investment Property & Development finance",
+        "href": "/investment-property-and-development-finance/"
+      },
+      {
+        "title": "Our Process",
+        "href": "/our-process/"
+      },
+      {
+        "title": "Why Credx?",
+        "href": "/why-choose-credx/"
+      }
+    ],
+    "footer": [
+      {
+        "title": "Complaints Policy",
+        "href": "/complaints-policy/"
+      },
+      {
+        "title": "Privacy Notice",
+        "href": "/privacy-notice/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+---
+import { site } from '../lib/content';
+import Icon from './Icon.astro';
+import phone from '../assets/icons/phone.svg?raw';
+import email from '../assets/icons/email.svg?raw';
+
+interface Props {
+  path: string;
+}
+const { path } = Astro.props;
+const t = site.theme;
+const tel = t.header_mobile_no.replace(/\s+/g, '');
+---
+<div class="topbar" set:html={t.header_text} />
+<header class="site-header" data-header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="/"><img src="/images/logo.svg" width="193" height="69" alt="Credx" /></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Toggle navigation" data-nav-toggle>
+      <Icon name="bars" class="when-closed" /><Icon name="xmark" class="when-open" />
+    </button>
+    <div class="nav-menu" id="site-menu" data-nav-menu>
+      <div class="nav-menu-inner">
+        <ul class="nav-list">
+          {site.menus.primary.map((item) => (
+            <li class="nav-item">
+              <a class="nav-link" href={item.href} aria-current={item.href === path ? 'page' : undefined}>{item.title}</a>
+            </li>
+          ))}
+          <li class="nav-item nav-quote"><a class="thm-btn" href="/get-a-quote/">GET A QUOTE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-contact">
+      <a class="contact-btn" href={`tel:${tel}`} aria-label={`Call ${t.header_mobile_no}`}><Fragment set:html={phone} /></a>
+      <a class="contact-btn" href={`mailto:${t.header_email}`} aria-label={`Email ${t.header_email}`}><Fragment set:html={email} /></a>
+    </div>
+  </nav>
+</header>

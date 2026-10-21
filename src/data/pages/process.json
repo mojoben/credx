@@ -1,0 +1,42 @@
+{
+  "id": 199,
+  "key": "process",
+  "path": "/our-process/",
+  "title": "Our Process",
+  "template": "template/our-process.php",
+  "seo": {
+    "title": "Our Lending Process | CredX Corporate Property Finance",
+    "description": "How CredX assesses and completes business-purpose property loans for corporate borrowers."
+  },
+  "content": "<p>At CredX we make property finance straightforward and transparent. Every transaction is different, so our process is designed to be flexible and fast while confirming eligibility and purpose at the outset. We lend to corporate borrowers for business and investment purposes only.</p>",
+  "fields": {
+    "banner_image": {
+      "src": "2025/09/our-process.jpg",
+      "width": 768,
+      "height": 512,
+      "alt": ""
+    },
+    "banner_title": "Our Simple Process",
+    "form_intro_text": "Any discussion with CredX concerns CredX’s own business-purpose lending criteria and is not advice on regulated residential mortgage products.",
+    "our_process_button_link": "#",
+    "our_process_data_box": [
+      {
+        "title": "Discover Your Needs",
+        "description": "Every great journey starts with understanding where you are and where you want to go. When you reach out to Credx, we take the time to listen and understand the transaction — whether it’s an auction lot, an investment property or a commercial acquisition — including the security, the timeline and the proposed exit."
+      },
+      {
+        "title": "Craft a Bespoke Solution",
+        "description": "Once we understand the transaction we structure a facility around the security, LTV, purpose and proposed exit, and issue indicative terms where appropriate. Every term is set out in plain English. No two transactions are the same, and no two CredX facilities are either."
+      },
+      {
+        "title": "Fast, Stress-Free Approval",
+        "description": "Property opportunities wait for no one, and speed is often critical. Once you’re happy with your bespoke plan, we work quickly to approve and release your funds. This means you can move forward with confidence, secure in the knowledge that your finance is in place exactly when you need it."
+      },
+      {
+        "title": "Flexible Repayment, Your Way",
+        "description": "We don’t just provide loans—we provide freedom and flexibility. Our repayment options are designed to fit your project timeline, whether you’re selling, refinancing, or completing another stage of your property journey. With Credx, your bridging finance works around you, not the other way around."
+      }
+    ],
+    "our_process_note": "At every step, our boutique approach ensures that you’re supported, informed, and empowered to make the right decisions for your property goals. With Credx, bridging finance isn’t just simple—it’s personal."
+  }
+}

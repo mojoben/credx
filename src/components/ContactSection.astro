@@ -1,0 +1,35 @@
+---
+import { site } from '../lib/content';
+import Reveal from './Reveal.astro';
+import EnquiryForm from './EnquiryForm.astro';
+
+interface Props {
+  intro?: string;
+}
+const { intro } = Astro.props;
+const c = site.contact;
+---
+<section class="get-in-touch" id="get-in-touch">
+  <div class="container">
+    <Reveal type="up" class="sec-heading">
+      <h2>{c.title}</h2>
+    </Reveal>
+    <div class="contact-cols">
+      <Reveal type="up" class="get-in-touch-cnt" set:html={c.description} />
+      <Reveal type="up" class="get-in-touch-cnt">
+        <ul>
+          <li>Phone:<a href={`tel:${c.phone.replace(/\s+/g, '')}`}>{c.phone}</a></li>
+          <li>Email:<a href={`mailto:${c.email}`}>{c.email}</a></li>
+          <li>Address: {c.address}</li>
+        </ul>
+      </Reveal>
+    </div>
+    <Reveal type="up">
+      <p class="get-in-touch-form-note" set:html={site.theme.get_in_touch_form_sub_heading} />
+      {intro && <p class="get-in-touch-form-note" set:html={intro} />}
+    </Reveal>
+    <Reveal type="up" class="get-in-touch-form">
+      <EnquiryForm />
+    </Reveal>
+  </div>
+</section>

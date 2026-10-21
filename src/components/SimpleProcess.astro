@@ -1,0 +1,32 @@
+---
+import { ENQUIRY, type Point } from '../lib/content';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  steps: Point[];
+}
+const { title, html, steps } = Astro.props;
+---
+<section class="simple-process">
+  <div class="container">
+    <div class="head-row">
+      <Reveal type="up" class="sec-heading">
+        <h2>{title}</h2>
+        <Fragment set:html={html} />
+      </Reveal>
+      <Reveal type="up">
+        <a href={ENQUIRY} class="thm-btn-1">Check Eligibility</a>
+      </Reveal>
+    </div>
+    <div class="simple-process-grid">
+      {steps.map((step, i) => (
+        <Reveal delay={300 + i * 100} class="simple-process-box">
+          <h3>{step.title}</h3>
+          <Fragment set:html={step.description} />
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>

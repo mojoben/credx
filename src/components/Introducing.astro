@@ -1,0 +1,27 @@
+---
+// Black angled panel with copy, and a portrait that breaks out of the top.
+import type { Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  image: ImgData;
+  alt?: string;
+}
+const { title, html, image, alt = '' } = Astro.props;
+---
+<section class="introducing panel angled skew-top">
+  <div class="container split">
+    <Reveal class="introducing-cnt">
+      <h2>{title}</h2>
+      <Fragment set:html={html} />
+    </Reveal>
+    <Reveal class="introducing-media">
+      <div class="introducing-img">
+        <Img img={image} alt={alt} sizes="(max-width: 991px) 80vw, 480px" widths={[400, 480, 720, 960]} />
+      </div>
+    </Reveal>
+  </div>
+</section>

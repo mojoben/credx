@@ -1,0 +1,12 @@
+---
+// Scroll-in entrance animation (replaces WOW.js + animate.css). `as` picks the wrapper element.
+interface Props {
+  type?: 'fade' | 'up' | 'zoom';
+  delay?: number;
+  as?: string;
+  class?: string;
+  [key: string]: any;
+}
+const { type = 'fade', delay, as: Tag = 'div', class: cls, ...rest } = Astro.props;
+---
+<Tag class={cls} data-reveal={type} style={delay ? `--delay:${delay}ms` : undefined} {...rest}><slot /></Tag>

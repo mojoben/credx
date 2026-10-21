@@ -1,0 +1,23 @@
+{
+  "id": 251,
+  "key": "quote",
+  "path": "/get-a-quote/",
+  "title": "Get A Quote",
+  "template": "template/get-a-quote.php",
+  "seo": {
+    "title": "Check Corporate Eligibility | CredX",
+    "description": "Enquire about business-purpose property finance for your UK limited company or SPV."
+  },
+  "content": "",
+  "fields": {
+    "form_intro_text": "",
+    "image": {
+      "src": "2025/08/Introducing.jpeg",
+      "width": 1066,
+      "height": 1600,
+      "alt": ""
+    },
+    "quote_introducing_description": "<p>Narinder Khattoare is the founder of CredX and a seasoned expert in bespoke property finance. With years of experience structuring short-term facilities, he helps corporate borrowers across the UK fund auction, investment and commercial property projects quickly and efficiently.</p>",
+    "quote_introducing_title": "Introducing Narinder"
+  }
+}

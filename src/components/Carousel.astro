@@ -1,0 +1,24 @@
+---
+// One-slide-at-a-time slider (replaces Owl Carousel): autoplays every 4s, stops on the last
+// slide, swipe/drag to move, optional arrow buttons. Each child element becomes a slide.
+import Icon from './Icon.astro';
+
+interface Props {
+  label: string;
+  nav?: boolean;
+  class?: string;
+}
+const { label, nav = false, class: cls } = Astro.props;
+const html = await Astro.slots.render('default');
+---
+<div class:list={['carousel', cls]} data-carousel role="region" aria-roledescription="carousel" aria-label={label}>
+  <div class="carousel-viewport">
+    <div class="carousel-track" data-track set:html={html} />
+  </div>
+  {nav && (
+    <div class="carousel-nav">
+      <button type="button" class="carousel-prev" data-prev aria-label="Previous slide"><Icon name="arrow-left" /></button>
+      <button type="button" class="carousel-next" data-next aria-label="Next slide"><Icon name="arrow-right" /></button>
+    </div>
+  )}
+</div>

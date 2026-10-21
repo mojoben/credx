@@ -1,0 +1,15 @@
+{
+  "id": 282,
+  "key": "complaints",
+  "path": "/complaints-policy/",
+  "title": "Complaints Policy",
+  "template": "template/complaints-policy.php",
+  "seo": {
+    "title": null,
+    "description": null
+  },
+  "content": "<p><strong>Complaints Policy</strong></p>\n<h2><strong>1. Introduction</strong></h2>\n<p>At CredX Ltd we are committed to providing a high-quality service. If you are dissatisfied with any aspect of that service, we encourage you to raise your concerns so that we can address them promptly and fairly.</p>\n<p>This policy applies to borrowing companies, their directors and guarantors, introducers, and any other party who deals with us.</p>\n<h2><strong>2. How to make a complaint</strong></h2>\n<p>If you wish to make a complaint, you can contact us via:</p>\n<p>Email: info@credx.co.uk</p>\n<p>Post: Suite 13, Regus, Admirals Park, Victory Way, Dartford, DA2 6QD</p>\n<p>Telephone: 0204 628 0990</p>\n<p>Please provide as much detail as possible, including the name of the borrowing company, your name and contact details, any facility or reference number, and a description of the issue and how you would like it resolved.</p>\n<h2><strong>3. Our complaints handling process</strong></h2>\n<ul>\n<li>Acknowledgement: we will acknowledge receipt of your complaint within five working days.</li>\n<li>Investigation: a member of our team will review your complaint and may contact you for further information.</li>\n<li>Resolution: we aim to provide a final written response within four weeks. If the matter is complex and requires more time, we will tell you and keep you updated on progress.</li>\n</ul>\n<h2><strong>4. Escalation</strong></h2>\n<p>If you are not satisfied with our response, you may request a further review by senior management. Please set out why you remain dissatisfied and what outcome you are seeking.</p>\n<h2><strong>5. External resolution</strong></h2>\n<p>CredX Ltd is an unregulated lender providing business-purpose property finance to corporate borrowers. Our lending is not regulated by the Financial Conduct Authority, and complaints about it cannot be referred to the Financial Ombudsman Service. Nor is our lending covered by the Financial Services Compensation Scheme.</p>\n<p>If you remain dissatisfied after our final response, you may wish to take independent legal advice about the options available to you.</p>\n<p>Complaints about how we have handled personal data can be referred to the Information Commissioner’s Office. Details are in our Privacy Notice.</p>\n<h2><strong>6. Record keeping</strong></h2>\n<p>All complaints and related correspondence will be retained for a minimum of five years.</p>",
+  "fields": {
+    "form_intro_text": ""
+  }
+}

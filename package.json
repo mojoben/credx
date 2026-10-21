@@ -1,0 +1,22 @@
+{
+  "name": "credx",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --port 4331",
+    "build": "astro build",
+    "preview": "astro preview --port 4331",
+    "start": "node ./dist/server/entry.mjs",
+    "qa:live": "node qa/capture-live.mjs",
+    "qa:film": "node qa/filmstrip.mjs"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.7",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.8"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
+}

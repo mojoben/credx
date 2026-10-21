@@ -1,0 +1,97 @@
+{
+  "id": 164,
+  "key": "commercial",
+  "path": "/commercial-bridging-finance/",
+  "title": "Commercial Bridging Finance",
+  "template": "template/commercial-bridging-finance.php",
+  "seo": {
+    "title": "Commercial Property Bridging for Companies & SPVs | CredX",
+    "description": "Short-term commercial and mixed-use property finance for corporate borrowers. Business-purpose lending only."
+  },
+  "content": "<p>Short-term finance for corporate borrowers acquiring, refinancing or improving commercial and mixed-use property for business or investment purposes.</p>\n<h4>What is Commercial Bridging Finance?</h4>\n<p>Commercial bridging finance is a short-term loan designed to help you fund the purchase or refurbishment of commercial properties. This type of loan is ideal for corporate borrowers that need fast access to capital where mainstream bank funding cannot meet the transaction timetable.</p>",
+  "fields": {
+    "banner_image_1": {
+      "src": "2025/09/commercial-property-finance.jpg",
+      "width": 1500,
+      "height": 1000,
+      "alt": ""
+    },
+    "banner_image_2": {
+      "src": "2025/09/commercial-property-finance-uk.jpg",
+      "width": 800,
+      "height": 533,
+      "alt": ""
+    },
+    "banner_title": "Commercial Bridging Finance: Empower Your Business Growth",
+    "bridging_finance_work_button_link": "#",
+    "bridging_finance_work_data_box": [
+      {
+        "title": "Consultation and Assessment",
+        "description": "Begin by speaking with one of our property experts who will assess the commercial property and the funding requirement."
+      },
+      {
+        "title": "Tailored Finance Solutions",
+        "description": "Based on the security, LTV, purpose and proposed exit we issue indicative terms where appropriate."
+      },
+      {
+        "title": "Quick Approval and Funding",
+        "description": "Once terms are agreed, underwriting, valuation and legal due diligence are completed and funds are released in line with the completion statement."
+      },
+      {
+        "title": "Flexible Repayment Options",
+        "description": "After completing your commercial project, you can choose from flexible repayment methods, including refinancing, selling, or simply paying off the loan from your business’s cash flow."
+      }
+    ],
+    "bridging_finance_work_title": "How Does Commercial Bridging Finance Work with Credx?",
+    "commercial_bridging_finance_used_points": [
+      {
+        "title": "Commercial Property Acquisition:",
+        "description": "Secure funding to acquire new commercial property, whether it’s an office, retail space, or industrial unit."
+      },
+      {
+        "title": "Refurbishment and Development:",
+        "description": "If you’re renovating or developing commercial properties, bridging finance can help cover costs while you work to secure long-term financing."
+      },
+      {
+        "title": "Property Investment:",
+        "description": "Commercial bridging loans are ideal for property investors looking to expand their portfolios quickly."
+      }
+    ],
+    "commercial_bridging_finance_used_title": "When is Commercial Bridging Finance Used?",
+    "why_choose_commercial_bridging_finance_button_link": "#",
+    "why_choose_commercial_bridging_finance_points": [
+      {
+        "title": "Expertise:",
+        "description": "With years of experience in commercial finance, we understand the unique needs of businesses and property investors."
+      },
+      {
+        "title": "Tailored Solutions:",
+        "description": "Every business is unique. We offer tailored solutions that match your specific project requirements."
+      },
+      {
+        "title": "Fast, Flexible, and Reliable:",
+        "description": "We move quickly to ensure you don’t miss out on commercial opportunities, offering flexible loan terms and quick processing."
+      }
+    ],
+    "why_choose_commercial_bridging_finance_title": "Why Choose Credx for Commercial Bridging Finance?",
+    "why_choose_commercial_bridging_points": [
+      {
+        "title": "Fast Turnaround:",
+        "description": "Our expedited approval and funding process enables you to act quickly on commercial property opportunities, avoiding lengthy delays."
+      },
+      {
+        "title": "Loan Sizes:",
+        "description": "We offer loans from £50,000 to £2million, ensuring you can secure the amount needed for large-scale projects."
+      },
+      {
+        "title": "Tailored to the Transaction: ",
+        "description": "Office, retail, industrial and mixed-use property considered, with facilities structured around your project."
+      },
+      {
+        "title": "Flexible Terms:",
+        "description": "We offer flexible repayment options to suit your business cash flow and project timelines."
+      }
+    ],
+    "why_choose_commercial_bridging_title": "Why Choose Credx for Commercial Bridging?"
+  }
+}

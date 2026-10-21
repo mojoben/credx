@@ -1,0 +1,96 @@
+{
+  "id": 217,
+  "key": "why",
+  "path": "/why-choose-credx/",
+  "title": "Why Choose Credx",
+  "template": "template/why-choose-credx.php",
+  "seo": {
+    "title": "Why Choose CredX | Corporate Property Lending",
+    "description": "A boutique lender for corporate borrowers — fast decisions, transparent terms, business-purpose property finance."
+  },
+  "content": "<p>At CredX we’re more than just a lender — we’re a funding partner. Founded by Narinder Khattoare, a seasoned expert in property finance, CredX takes a bespoke approach to every borrower, every transaction and every challenge. Narinder’s philosophy is simple: no two transactions are the same, so no two facilities should be either.</p>",
+  "fields": {
+    "banner_image": {
+      "src": "2025/08/Introducing.jpeg",
+      "width": 1066,
+      "height": 1600,
+      "alt": ""
+    },
+    "banner_title": "Why Choose Credx?",
+    "form_intro_text": "",
+    "meet_team_description": "<p>A small, senior team. The people you speak to are the people who underwrite, structure and complete your facility.</p>",
+    "meet_team_title": "Meet the Team",
+    "team": [
+      {
+        "name": "Narinder",
+        "role": "Founder & CEO",
+        "description": "<p>Narinder has spent more than 20 years in specialist finance, property lending and fintech, and has sat on every side of the table — lender, broker and founder. He has run lending businesses at senior executive and CEO level: originating and structuring transactions, raising capital, and building the long-term investor and introducer relationships that sit behind all of it.</p>",
+        "modal_desription": "<p>Narinder has spent more than 20 years in specialist finance, property lending and fintech, and has sat on every side of the table — lender, broker and founder. He has run lending businesses at senior executive and CEO level: originating and structuring transactions, raising capital, and building the long-term investor and introducer relationships that sit behind all of it.</p>\n<p>At CredX he sets the strategic direction and drives growth, staying closest to origination, funding, deal structuring and investor relationships. Having occupied all three seats, he knows what a borrower needs, what an investor expects, and how to structure something that works commercially for both. He is drawn to the deals others have written off and to the people who spot the angle nobody else did — and has little patience for last-minute surprises, guarded answers, or a problem arriving without a suggested solution.</p>\n<p>Outside work he keeps active and spends his time with family. He is a lifelong Manchester United supporter, a passion shared with his two teenage boys — which, as any United fan will tell you, is not always the most relaxing way to spend a weekend.</p>",
+        "image": {
+          "src": "2025/08/Introducing.jpeg",
+          "width": 1066,
+          "height": 1600,
+          "alt": ""
+        }
+      },
+      {
+        "name": "Laura",
+        "role": "Chief Operating Officer",
+        "description": "<p>Laura brings structure, clarity and a calm head to how Credx runs. An experienced Strategic Business Partner and Assoc CIPD professional, she builds high-performing teams and puts governance in place that people actually use.</p>",
+        "modal_desription": "<p>Laura brings structure, clarity and a calm head to how Credx runs. An experienced Strategic Business Partner and Assoc CIPD professional, she builds high-performing teams and puts governance in place that people actually use.</p>\n<p>Her background spans finance, HR and operational strategy — a combination that means she sees the numbers and the people behind them at the same time. Complex problems come in; practical, people-focused solutions go out. Vague communication, avoidable waste and unnecessary drama get short shrift, which is a large part of why the business runs as cleanly as it does.</p>\n<p>Away from the office she is happiest somewhere new and outdoors, ideally with a long walk and a big view attached. She travels whenever she can, keeps her people close, and rates the quiet satisfaction of a day well spent above most things.</p>",
+        "image": {
+          "src": "2026/09/Laura.jpg",
+          "width": 848,
+          "height": 1264,
+          "alt": ""
+        }
+      },
+      {
+        "name": "Dorant",
+        "role": "Head of Lending & Investor Relations",
+        "description": "<p>Dorant spent his early career in investor relations and structured funding, managing high-net-worth portfolios and securing funding lines. That side of the table taught him something most brokers pick up slowly: how funding decisions are really made, and what a lender wants to see before they say yes.</p>",
+        "modal_desription": "<p>Dorant spent his early career in investor relations and structured funding, managing high-net-worth portfolios and securing funding lines. That side of the table taught him something most brokers pick up slowly: how funding decisions are really made, and what a lender wants to see before they say yes.</p>\n<p>He now heads both sides of that equation at CredX, leading lending and investor relations — structuring competitive deals on one hand, keeping funding partners close on the other. His approach is relationship-driven rather than transactional, and he would sooner over-prepare than watch an opportunity slip; deals built properly at the outset tend to deliver for everyone at the table.</p>\n<p>Competitive by nature, he plays football, tennis and padel, and takes the discipline and teamwork of all three back to his desk. Off the court he’s usually reading, playing chess, or eating well in good company — same focus, lower stakes.</p>",
+        "image": {
+          "src": "2026/09/Dorant.png",
+          "width": 1024,
+          "height": 1536,
+          "alt": ""
+        }
+      },
+      {
+        "name": "Justine",
+        "role": "Administration Assistant ",
+        "description": "<p>Justine’s career has been client-facing from the start, built on a foundation in bespoke sales. Three years ago she moved into peer-to-peer finance, collating information and preparing deals for investors while doubling as the first voice and face anyone met when they came to the business.</p>",
+        "modal_desription": "<p>Justine’s career has been client-facing from the start, built on a foundation in bespoke sales. Three years ago she moved into peer-to-peer finance, collating information and preparing deals for investors while doubling as the first voice and face anyone met when they came to the business.</p>\n<p>At CredX she keeps the operation moving, supporting the team across administration while building relationships of her own with investors and borrowers. Nothing sits unanswered for long on her watch, and she would rather ask for the full picture up front than find the gap halfway through. Give her a clear brief, a team to talk to and something new to learn and she is in her element.</p>\n<p>Outside of work, she spends her time with family and friends, and is happiest exploring a city she hasn’t seen before, at home or abroad. Interior design has long been an interest, and a recent house move has finally given her a blank canvas.</p>",
+        "image": {
+          "src": "2026/09/justine.jpg",
+          "width": 848,
+          "height": 1264,
+          "alt": ""
+        }
+      }
+    ],
+    "why_credx_points": [
+      {
+        "title": "Bespoke Solutions",
+        "description": "Every borrower is different, and every property transaction comes with its own challenges. Under Narinder’s guidance, our team structures facilities around the specific deal. Whether it’s an auction purchase, an investment or development project, or a commercial acquisition, the funding is built around your plan."
+      },
+      {
+        "title": "Transparent Terms",
+        "description": "Credx operates with clarity and integrity. There are no hidden fees, no surprises, and no jargon-filled contracts. From day one, Narinder ensures you understand exactly how your loan works and what to expect, giving you confidence and peace of mind."
+      },
+      {
+        "title": "Experienced Team",
+        "description": "With years of experience in property lending, Narinder and the CredX team provide insight and hands-on support at every step, helping borrowers avoid common pitfalls and move quickly when opportunities arise."
+      },
+      {
+        "title": "Fast and Flexible",
+        "description": "Time-sensitive property projects require speed and flexibility. Narinder built CredX to respond quickly and adapt to the transaction, so funding is in place exactly when it’s needed. Our fast decision-making and flexible terms mean you can act with confidence, knowing your funding is in place."
+      },
+      {
+        "title": "",
+        "description": "At CredX it’s not just about providing loans — it’s about structuring facilities that actually work, guided personally by Narinder Khattoare."
+      }
+    ]
+  }
+}

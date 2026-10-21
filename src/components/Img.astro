@@ -1,0 +1,19 @@
+---
+// Responsive, optimised <img> for a file from the old uploads folder.
+import { Image } from 'astro:assets';
+import { media } from '../lib/media';
+import type { Img as ImgData } from '../lib/content';
+
+interface Props {
+  img: ImgData;
+  alt?: string;
+  sizes: string;
+  widths?: number[];
+  class?: string;
+  eager?: boolean;
+}
+const { img, alt = '', sizes, widths = [400, 640, 960, 1280], class: cls, eager = false } = Astro.props;
+const meta = media(img.src);
+const ws = [...new Set(widths.map((w) => Math.min(w, meta.width)))];
+---
+<Image src={meta} alt={alt} widths={ws} sizes={sizes} class={cls} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : undefined} />

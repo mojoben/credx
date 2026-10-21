@@ -1,0 +1,26 @@
+---
+// Heading + copy beside two overlapping photos (home "Welcome" and the finance page intros).
+import type { Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  image1: ImgData;
+  image2: ImgData;
+}
+const { title, html, image1, image2 } = Astro.props;
+---
+<section class="about">
+  <div class="container split">
+    <Reveal class="about-text">
+      <h2>{title}</h2>
+      <Fragment set:html={html} />
+    </Reveal>
+    <Reveal type="zoom" class="about-media">
+      <Img img={image1} sizes="(max-width: 575px) 85vw, 530px" widths={[440, 530, 800, 1060]} class="about-img-1" />
+      <Img img={image2} sizes="300px" widths={[300, 600]} class="about-img-2" />
+    </Reveal>
+  </div>
+</section>

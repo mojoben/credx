@@ -1,0 +1,76 @@
+{
+  "id": 109,
+  "key": "auction",
+  "path": "/bridging-finance-for-auction-property-purchases/",
+  "title": "Auction Finance for Corporate borrowers",
+  "template": "template/bridging-finance-for-auction-property-purchases.php",
+  "seo": {
+    "title": "Auction Finance for UK Companies & SPVs | CredX",
+    "description": "Short-term finance to help corporate borrowers complete qualifying auction property purchases on time. Business and investment purposes only."
+  },
+  "content": "<p>Buying at auction is a real opportunity, but it comes with a fixed completion deadline. CredX provides short-term finance to help you complete qualifying auction property purchases within the required timetable. Funding is for business or investment purposes only.</p>\n<h4>What is Auction Property Financing?</h4>\n<p>Auction finance is a short-term facility designed to help corporate borrowers complete auction property purchases. Auctions typically require completion within 28 days or less, which mainstream lenders often cannot meet. The facility is repaid from an agreed exit such as a sale or refinance.</p>\n<p>With a CredX facility in place, you can bid and complete with confidence.</p>",
+  "fields": {
+    "banner_image_1": {
+      "src": "2025/09/AdobeStock_248911304-scaled.jpeg",
+      "width": 2560,
+      "height": 1707,
+      "alt": ""
+    },
+    "banner_image_2": {
+      "src": "2025/09/AdobeStock_49737747-scaled.jpeg",
+      "width": 2560,
+      "height": 1706,
+      "alt": ""
+    },
+    "process_with_credx_button_link": "#",
+    "process_with_credx_data_box": [
+      {
+        "title": "Initial Consultation",
+        "description": "We’ll start by understanding the auction property you’re interested in and your specific funding needs. You’ll receive a clear, tailored recommendation on the finance options available to you."
+      },
+      {
+        "title": "Quick Property Evaluation",
+        "description": "Once the lot is identified we assess the security property and the required facility. We take a pragmatic approach and will consider properties requiring renovation as well as those in good order."
+      },
+      {
+        "title": "Indicative Terms & Agreement",
+        "description": "Upon receiving all necessary documentation, we’ll issue a loan offer. We can offer funds within a few days, ensuring you’re ready to bid on the property."
+      },
+      {
+        "title": "Auction Purchase",
+        "description": "With terms agreed, you can bid with confidence. On a successful bid we work to the auction deadline so the purchase completes on time."
+      },
+      {
+        "title": "Repayment Options",
+        "description": "The facility is repaid through the agreed exit — typically refinance onto longer-term funding or sale of the property."
+      }
+    ],
+    "process_with_credx_title": "The Auction Property Purchase Process with Credx",
+    "why_bridging_finance_button_link": "#",
+    "why_bridging_finance_description": "<p>Auction purchases come with strict deadlines — typically 28 days to complete. Mainstream lenders often cannot process an application in that window. A CredX facility allows you to complete on time.</p>",
+    "why_bridging_finance_title": "Why Bridging Finance is Essential for Auction Property Purchases",
+    "why_choose_credx_for_auction_points": [
+      {
+        "title": "Speed and Efficiency:",
+        "description": "Auction purchases require fast turnaround. We issue indicative terms quickly and work to the auction timetable."
+      },
+      {
+        "title": "Transaction-Led Underwriting:",
+        "description": "We assess the company, the security property and the proposed exit, rather than applying consumer credit scoring."
+      },
+      {
+        "title": "Up to 75% Loan-to-Value (LTV): ",
+        "description": "We provide up to 75% LTV on qualifying auction properties."
+      },
+      {
+        "title": "Flexible Terms: ",
+        "description": "Repayment structured around your project timeline and agreed exit — typically sale or refinance."
+      },
+      {
+        "title": "Experienced Team: ",
+        "description": "Our team has years of experience funding auction transactions and will keep the process moving to the completion deadline."
+      }
+    ],
+    "why_choose_credx_for_auction_title": "Why Choose Credx for Auction Property Purchases?"
+  }
+}

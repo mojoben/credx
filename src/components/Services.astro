@@ -1,0 +1,68 @@
+---
+// "Our Bridging Finance Solutions". Desktop: as you scroll, the copy on the left and the
+// highlighted card on the right step through each service. Below 992px: a swipeable slider.
+import { ENQUIRY, type Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Carousel from './Carousel.astro';
+
+interface Props {
+  items: { title: string; image: ImgData; description: string }[];
+}
+const { items } = Astro.props;
+---
+<section class="services-mobile">
+  <div class="container">
+    <Carousel label="Our bridging finance solutions">
+      {items.map((item) => (
+        <div class="services-slide">
+          <div class="services-slide-img">
+            <Img img={item.image} sizes="(max-width: 767px) 90vw, 620px" widths={[480, 720, 1000]} />
+            <div class="services-slide-name" set:html={item.title} />
+          </div>
+          <div class="our-bridging-cnt">
+            <Fragment set:html={item.description} />
+            <a href={ENQUIRY} class="thm-btn-1">Speak with a Specialist</a>
+          </div>
+        </div>
+      ))}
+    </Carousel>
+  </div>
+</section>
+
+<section class="services" data-services>
+  <div class="container services-grid">
+    <div class="services-content">
+      <div class="services-stage">
+        {items.map((item, i) => (
+          <div class:list={['services-item', { 'is-active': i === 0 }]} data-item={i} aria-hidden={i === 0 ? undefined : 'true'}>
+            <div class="our-bridging-cnt">
+              <Fragment set:html={item.description} />
+              <a href={ENQUIRY} class="thm-btn-1" tabindex={i === 0 ? undefined : -1}>Speak with a Specialist</a>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* invisible copies that give each service its share of the scroll distance */}
+      {items.map((item, i) => (
+        <div class="services-spacer" id={`item-${i}`} data-spacer={i} aria-hidden="true" inert>
+          <div class="our-bridging-cnt">
+            <Fragment set:html={item.description} />
+            <span class="thm-btn-1">Speak with a Specialist</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <aside class="services-nav" aria-label="Bridging finance solutions">
+      <ul>
+        {items.map((item, i) => (
+          <li class:list={{ 'is-active': i === 0 }} data-nav={i}>
+            <div class="services-card-img">
+              <Img img={item.image} sizes="(max-width: 1199px) 395px, 526px" widths={[400, 526, 800, 1052]} />
+            </div>
+            <a href={`#item-${i}`} class="anchor-link" set:html={item.title} />
+          </li>
+        ))}
+      </ul>
+    </aside>
+  </div>
+</section>

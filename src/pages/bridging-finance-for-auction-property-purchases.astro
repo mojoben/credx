@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import AboutIntro from '../components/AboutIntro.astro';
+import Points from '../components/Points.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import WhyBridging from '../components/WhyBridging.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('auction');
+const f = p.fields;
+---
+<Base page="auction" path={p.path} crumb={p.title}>
+  <main>
+    <AboutIntro title={p.title} html={p.content} image1={f.banner_image_1} image2={f.banner_image_2} />
+    <Points title={f.why_choose_credx_for_auction_title} points={f.why_choose_credx_for_auction_points} />
+    <ProcessSteps title={f.process_with_credx_title} steps={f.process_with_credx_data_box} />
+    <WhyBridging title={f.why_bridging_finance_title} button="SPEAK TO US TODAY" cols={8} html={f.why_bridging_finance_description} />
+    <ContactSection intro={f.form_intro_text} />
+  </main>
+</Base>

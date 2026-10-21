@@ -1,0 +1,28 @@
+---
+// Top-of-page black panel with heading and copy, and optionally a tall photo (Our Process, Why Credx).
+import type { Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  image?: ImgData;
+}
+const { title, html, image } = Astro.props;
+---
+<section class="page-intro panel angled skew-bottom">
+  <div class="container split">
+    <Reveal class="page-intro-cnt">
+      <h2>{title}</h2>
+      <Fragment set:html={html} />
+    </Reveal>
+    {image && (
+      <Reveal type="zoom" class="page-intro-media">
+        <div class="page-intro-img">
+          <Img img={image} sizes="(max-width: 991px) 86vw, 510px" widths={[400, 510, 760, 1020]} eager />
+        </div>
+      </Reveal>
+    )}
+  </div>
+</section>

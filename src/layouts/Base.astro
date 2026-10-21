@@ -1,0 +1,119 @@
+---
+import '../styles/base.css';
+import '../styles/chrome.css';
+import '../styles/sections.css';
+import '../styles/form.css';
+import { getImage } from 'astro:assets';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site, seo } from '../lib/content';
+import { media } from '../lib/media';
+import favicon from '../assets/favicon.jpg';
+
+interface Props {
+  /** key into src/data/seo.json */
+  page: string;
+  path: string;
+  title?: string;
+  /** breadcrumb name (the page's own title) */
+  crumb?: string;
+  description?: string | null;
+  noindex?: boolean;
+}
+const { page, path } = Astro.props;
+const meta = seo[page] ?? {};
+const title: string = Astro.props.title ?? meta.title ?? site.name;
+const description = Astro.props.description ?? meta.description;
+const canonical = new URL(path, site.url + '/').href;
+
+const og = meta.ogImage ? await getImage({ src: media(meta.ogImage), width: 1200, format: 'jpg', quality: 82 }) : null;
+const ogImage = og ? new URL(og.src, site.url).href : null;
+const icon32 = await getImage({ src: favicon, width: 32, height: 32, format: 'png' });
+const icon192 = await getImage({ src: favicon, width: 192, height: 192, format: 'png' });
+const icon180 = await getImage({ src: favicon, width: 180, height: 180, format: 'png' });
+
+const org = seo._organization;
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': canonical,
+      url: canonical,
+      name: title,
+      isPartOf: { '@id': `${site.url}/#website` },
+      about: page === 'home' ? { '@id': `${site.url}/#organization` } : undefined,
+      ...(ogImage ? { primaryImageOfPage: { '@type': 'ImageObject', url: ogImage }, thumbnailUrl: ogImage } : {}),
+      datePublished: meta.published,
+      dateModified: meta.modified,
+      description: description ?? undefined,
+      breadcrumb: { '@id': `${canonical}#breadcrumb` },
+      inLanguage: 'en-GB',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${canonical}#breadcrumb`,
+      itemListElement: page === 'home'
+        ? [{ '@type': 'ListItem', position: 1, name: 'Home' }]
+        : [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
+            { '@type': 'ListItem', position: 2, name: Astro.props.crumb ?? title.split(' | ')[0].split(' - ')[0] },
+          ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site.url}/#website`,
+      url: `${site.url}/`,
+      name: site.name,
+      description: site.tagline,
+      publisher: { '@id': `${site.url}/#organization` },
+      inLanguage: 'en-GB',
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${site.url}/#organization`,
+      name: org.name,
+      url: `${site.url}/`,
+      logo: { '@type': 'ImageObject', url: `${site.url}/images/logo.svg` },
+    },
+  ],
+};
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content={Astro.props.noindex ? 'noindex, follow' : meta.robots ?? 'index, follow'} />
+    {!Astro.props.noindex && <link rel="canonical" href={canonical} />}
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content={meta.ogType ?? 'website'} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    {meta.modified && meta.ogType === 'article' && <meta property="article:modified_time" content={meta.modified} />}
+    {og && <meta property="og:image" content={ogImage} />}
+    {og && <meta property="og:image:width" content={String(og.attributes.width)} />}
+    {og && <meta property="og:image:height" content={String(og.attributes.height)} />}
+    {og && <meta property="og:image:type" content="image/jpeg" />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href={icon32.src} sizes="32x32" type="image/png" />
+    <link rel="icon" href={icon192.src} sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href={icon180.src} />
+    <link rel="preload" href="/fonts/aller_regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/aller_light.woff2" as="font" type="font/woff2" crossorigin />
+    <script is:inline set:html={`document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: no-preference) and (hover: hover)').matches)document.documentElement.classList.add('reveal-on')`} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <Header path={path} />
+    <slot />
+    <Footer />
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

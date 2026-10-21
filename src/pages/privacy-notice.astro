@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('privacy');
+---
+<Base page="privacy" path={p.path} crumb={p.title}>
+  <main class="policy privacy-notice">
+    <div class="container" set:html={p.content} />
+    <ContactSection intro={p.fields.form_intro_text} />
+  </main>
+</Base>

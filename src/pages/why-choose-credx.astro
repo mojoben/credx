@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Team from '../components/Team.astro';
+import WhyCredx from '../components/WhyCredx.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('why');
+const f = p.fields;
+---
+<Base page="why" path={p.path} crumb={p.title}>
+  <main>
+    <PageBanner title={f.banner_title} html={p.content} />
+    <Team title={f.meet_team_title} html={f.meet_team_description} members={f.team} />
+    <WhyCredx points={f.why_credx_points} />
+    <ContactSection intro={f.form_intro_text} />
+  </main>
+</Base>

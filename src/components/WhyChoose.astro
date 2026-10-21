@@ -1,0 +1,35 @@
+---
+import { ENQUIRY, type Img as ImgData } from '../lib/content';
+import Img from './Img.astro';
+import Reveal from './Reveal.astro';
+import Carousel from './Carousel.astro';
+
+interface Props {
+  title: string;
+  image: ImgData;
+  items: { description: string }[];
+}
+const { title, image, items } = Astro.props;
+---
+<section class="why-choose panel angled skew-bottom">
+  <div class="container split">
+    <Reveal>
+      <div class="why-choose-img">
+        <Img img={image} sizes="(max-width: 991px) 90vw, 636px" widths={[480, 636, 960, 1272]} />
+      </div>
+    </Reveal>
+    <Reveal>
+      <div class="why-choose-box">
+        <h2 class="why-choose-heading">{title}</h2>
+        <Carousel label={title} nav>
+          {/* the old template wrapped this rich text in another <p>; browsers turned that into an
+              empty <p> either side, which sets the spacing and where the 4-line clamp cuts */}
+          {items.map((item) => <div class="why-choose-cnt" set:html={`<p></p>${item.description}<p></p>`} />)}
+        </Carousel>
+        <div class="explore-btn">
+          <a href={ENQUIRY} class="thm-btn">EXPLORE OUR SERVICES</a>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>

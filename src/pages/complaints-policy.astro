@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Reveal from '../components/Reveal.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('complaints');
+---
+<Base page="complaints" path={p.path} crumb={p.title}>
+  <main class="policy company-policy">
+    <div class="container">
+      <Reveal type="up" set:html={p.content} />
+    </div>
+    <ContactSection intro={p.fields.form_intro_text} />
+  </main>
+</Base>

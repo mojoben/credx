@@ -1,0 +1,23 @@
+---
+import { site } from '../lib/content';
+---
+<footer class="site-footer">
+  <div class="footer-top">
+    <a class="footer-logo" href="/"><img src="/images/logo.svg" width="193" height="69" alt="Credx" loading="lazy" /></a>
+    <ul class="footer-links">
+      {site.menus.footer.map((item) => <li><a href={item.href}>{item.title}</a></li>)}
+      <li><a class="thm-btn" href="/get-a-quote/">GET A QUOTE</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-company">
+      <p><b>CredX provides unregulated, business-purpose property finance exclusively to corporate borrowers. We do not provide regulated residential mortgages or consumer credit.</b></p>
+      <p>Our lending is not regulated by the Financial Conduct Authority. Loans are for business and investment purposes only and are not covered by the Financial Ombudsman Service or the Financial Services Compensation Scheme. All facilities are subject to underwriting, valuation and legal due diligence.</p>
+      <p>CredX Ltd is registered in England &amp; Wales with Company Number 16640225. Registered office: Suite F16 St George’s Business Park, Castle Road, Sittingbourne , Kent ME10 3TB. Registered with the Information Commissioner’s Office (ICO) under registration number: ZB991146</p>
+      <p><b>Property may be repossessed if you do not keep up repayments on any loan secured against it.</b></p>
+    </div>
+    <div class="footer-crafted">
+      <a target="_blank" rel="noopener" href="https://mojomedia.co.uk/">CRAFTED BY MOJO</a>
+    </div>
+  </div>
+</footer>

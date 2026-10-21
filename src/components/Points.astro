@@ -1,0 +1,24 @@
+---
+// Black angled panel with a list of bold-titled points, each marked with the yellow shape.
+import type { Point } from '../lib/content';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title: string;
+  points: Point[];
+}
+const { title, points } = Astro.props;
+---
+<section class="points panel angled skew-bottom">
+  <div class="container">
+    <Reveal class="sec-heading"><h2>{title}</h2></Reveal>
+    <div class="points-list">
+      {points.map((p, i) => (
+        <Reveal delay={300 + i * 100} class="point">
+          <img src="/images/yellow-shape.png" width="94" height="60" alt="" loading="lazy" />
+          <p><b set:html={p.title} /> <Fragment set:html={p.description} /></p>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>

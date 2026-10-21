@@ -1,0 +1,129 @@
+{
+  "id": 8,
+  "key": "home",
+  "path": "/",
+  "title": "Home",
+  "template": "template/home.php",
+  "seo": {
+    "title": "CredX | Business Bridging Finance for UK Limited Companies & SPVs",
+    "description": "Short-term property finance for corporate borrowers — auction, investment, refurbishment, development and commercial property. Business-purpose lending only."
+  },
+  "content": "",
+  "fields": {
+    "about_description": "<p>At CredX, we understand that no two transactions are the same, which is why we structure each facility around the borrowing company’s project and exit strategy. Based in Kent and lending across the UK, we provide fast, flexible funding to corporate borrowers for Property Investment, commercial and auction property.</p>\n<p>&nbsp;</p>",
+    "about_image_1": {
+      "src": "2025/08/home-about-1.webp",
+      "width": 1500,
+      "height": 1000,
+      "alt": ""
+    },
+    "about_image_2": {
+      "src": "2025/08/home-about-2.webp",
+      "width": 1500,
+      "height": 1000,
+      "alt": ""
+    },
+    "about_title": "Welcome to Credx: A Lender who finds ways to say yes!",
+    "address": "Credx, Suite 13, Regus, Admirals Park, Victory Way, Dartford, DA2 6QD",
+    "banner_button_link": "#",
+    "banner_description": "<p>CredX provides short-term property finance to Corporate Borrowers for business and investment purposes, including auction purchases, investment property, refurbishment, development and commercial property.</p>",
+    "banner_image": {
+      "src": "2025/08/home-banner.webp",
+      "width": 1500,
+      "height": 428,
+      "alt": ""
+    },
+    "banner_title": "Fast, Flexible Property Finance for Corporate Borrowers",
+    "bridging_finance": [
+      {
+        "title": "Auction Finance",
+        "image": {
+          "src": "2025/08/bridging.webp",
+          "width": 1500,
+          "height": 1000,
+          "alt": ""
+        },
+        "description": "<h2>Our Bridging Finance Solutions</h2>\n<p>We offer a wide range of short-term facilities designed to meet your needs — from auction purchases to investment, refurbishment, development and commercial property.</p>\n<h3>Auction Property Purchases</h3>\n<p>Whether you’re buying a property at auction or need to close a deal quickly, we provide fast and flexible lending. We understand the urgency and offer bridging loans that can be arranged within days, ensuring you never miss out on a great opportunity.</p>\n<ul>\n<li>Fast decisions</li>\n<li>Up to 75% loan-to-value (LTV)</li>\n<li>No credit score checks (subject to conditions)</li>\n</ul>",
+        "button_link": "#"
+      },
+      {
+        "title": "Property Investment Bridging & Development Finance",
+        "image": {
+          "src": "2025/09/AdobeStock_84905415.jpg",
+          "width": 1200,
+          "height": 800,
+          "alt": ""
+        },
+        "description": "<h2>Our Bridging Finance Solutions</h2>\n<p>We offer a wide range of short-term facilities designed to meet your needs — from auction purchases to investment, refurbishment, development and commercial property.</p>\n<h3>Property Investment Bridging &amp; Development Finance</h3>\n<p>Short-term property finance for corporate borrowers acquiring, refinancing or improving investment and development property. Funding is available only for business or investment purposes. CredX does not offer residential mortgages or loans to individual consumers.</p>\n<ul>\n<li>Property loans from £25,000 to £1 million</li>\n<li>Short-term finance for qualifying business and investment property transactions</li>\n<li>Flexible repayment terms tailored to your situation</li>\n<li>Available to corporate borrowers</li>\n</ul>",
+        "button_link": "#"
+      },
+      {
+        "title": "Commercial Property Bridging",
+        "image": {
+          "src": "2025/09/commerical-property-lending.jpg",
+          "width": 1427,
+          "height": 800,
+          "alt": ""
+        },
+        "description": "<h2>Our Bridging Finance Solutions</h2>\n<p>We offer a wide range of short-term facilities designed to meet your needs — from auction purchases to investment, refurbishment, development and commercial property.</p>\n<h3>Commercial Bridging</h3>\n<p>For businesses and commercial property investors, Credx offers bridge lending for both short-term and long-term commercial property needs. Whether you need funds for a refurbishment, a new acquisition, or bridging the gap between sale and purchase, we have the expertise to help.</p>\n<ul>\n<li>Flexible loan amounts from £50,000 to £2 million</li>\n<li>Fast processing to help you seize commercial opportunities</li>\n<li>Tailored solutions for businesses of all sizes</li>\n</ul>",
+        "button_link": ""
+      }
+    ],
+    "email": "info@credx.co.uk",
+    "form_intro_text": "",
+    "get_in_touch_description": "<p>Ready to discuss your bridging finance needs? We’re here to help. Contact us today to speak with a member of our team.</p>",
+    "get_in_touch_title": "Get in Touch with Credx",
+    "introducing_description": "<p>Narinder Khattoare is the founder of Credx and a seasoned expert in property finance. With years of experience in crafting tailored lending solutions, he helps clients across the UK secure the right funding quickly and efficiently for auction, property investment bridging finance, and commercial property projects.</p>",
+    "introducing_image": {
+      "src": "2025/08/Introducing.jpeg",
+      "width": 1066,
+      "height": 1600,
+      "alt": ""
+    },
+    "introducing_title": "Introducing Narinder",
+    "our_simple_process_button_link": "#",
+    "our_simple_process_data_box": [
+      {
+        "title": "Initial Consultation",
+        "description": "<p>Get in touch with our team for a free, no-obligation consultation. We’ll discuss your needs and help identify the best solution for you.</p>"
+      },
+      {
+        "title": "Tailored Solution",
+        "description": "<p>We review the requested facility, security, LTV, purpose and proposed exit and, where appropriate, issue indicative terms in writing.</p>"
+      },
+      {
+        "title": "Fast Approval",
+        "description": "<p>Once you’ve agreed to the terms, we’ll work quickly to approve and release your funds, allowing you to move forward with your property project.</p>"
+      },
+      {
+        "title": "Flexible Repayment",
+        "description": "<p>We offer flexible repayment options that can be tailored to suit your timeline, ensuring your financing works for you.</p>"
+      }
+    ],
+    "our_simple_process_description": "<p>Getting the bridging finance you need with Credx is quick, easy, and hassle-free. Here’s how it works:</p>",
+    "our_simple_process_title": "Our Simple Process",
+    "phone": "07903 659 305",
+    "why_choose_button_link": "#",
+    "why_choose_credx": [
+      {
+        "description": "<p><strong>Tailored Solutions:</strong> As a lender, we work closely with you to understand the transaction and structure the right facility.</p>"
+      },
+      {
+        "description": "<p><strong>Speed:</strong> We understand that time is of the essence in property transactions, so we strive to deliver funds to you promptly and efficiently.</p>"
+      },
+      {
+        "description": "<p><strong>Expertise:</strong> Led by Narinder Khattoare, our team has deep knowledge of property lending, so facilities are structured appropriately for the transaction.</p>"
+      },
+      {
+        "description": "<p><strong>Nationwide Coverage:</strong> While we’re based in Kent, our services are available throughout the UK.</p>"
+      }
+    ],
+    "why_choose_image": {
+      "src": "2025/08/why-choose.webp",
+      "width": 1500,
+      "height": 1000,
+      "alt": ""
+    },
+    "why_choose_title": "Why Choose Credx?"
+  }
+}

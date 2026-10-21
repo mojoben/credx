@@ -1,0 +1,88 @@
+{
+  "home": {
+    "title": "CredX | Business Bridging Finance for UK Limited Companies & SPVs",
+    "description": "Short-term property finance for corporate borrowers — auction, investment, refurbishment, development and commercial property. Business-purpose lending only.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "website",
+    "ogImage": "2025/08/home-about-2.webp",
+    "published": "2025-08-27T04:24:20+00:00",
+    "modified": "2026-09-23T13:13:04+00:00"
+  },
+  "_organization": {
+    "name": "Credx",
+    "logo": "2025/08/logo.svg",
+    "sameAs": []
+  },
+  "auction": {
+    "title": "Auction Finance for UK Companies & SPVs | CredX",
+    "description": "Short-term finance to help corporate borrowers complete qualifying auction property purchases on time. Business and investment purposes only.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/09/commerical-property-lending.jpg",
+    "published": "2025-09-02T04:54:57+00:00",
+    "modified": "2026-08-25T16:30:19+00:00"
+  },
+  "investment": {
+    "title": "Property Investment Bridging & Development Finance for Companies & SPVs | CredX",
+    "description": null,
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/09/commercial-property-finance.jpg",
+    "published": "2025-09-02T05:29:26+00:00",
+    "modified": "2026-08-27T16:20:24+00:00"
+  },
+  "commercial": {
+    "title": "Commercial Property Bridging for Companies & SPVs | CredX",
+    "description": "Short-term commercial and mixed-use property finance for corporate borrowers. Business-purpose lending only.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/09/commercial-property-finance-uk.jpg",
+    "published": "2025-09-02T06:30:16+00:00",
+    "modified": "2026-08-25T16:25:02+00:00"
+  },
+  "process": {
+    "title": "Our Lending Process | CredX Corporate Property Finance",
+    "description": "How CredX assesses and completes business-purpose property loans for corporate borrowers.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/09/Residential-Bridging-Finance-uk.jpg",
+    "published": "2025-09-02T08:31:58+00:00",
+    "modified": "2026-08-26T05:02:11+00:00"
+  },
+  "why": {
+    "title": "Why Choose CredX | Corporate Property Lending",
+    "description": "A boutique lender for corporate borrowers — fast decisions, transparent terms, business-purpose property finance.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/08/home-banner.webp",
+    "published": "2025-09-02T09:50:21+00:00",
+    "modified": "2026-09-07T12:19:45+00:00"
+  },
+  "quote": {
+    "title": "Check Corporate Eligibility | CredX",
+    "description": "Enquire about business-purpose property finance for your UK limited company or SPV.",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": "2025/09/Residential-Bridging-Finance.jpg",
+    "published": "2025-09-09T05:36:35+00:00",
+    "modified": "2026-08-26T05:09:57+00:00"
+  },
+  "privacy": {
+    "title": "Privacy Notice - Credx",
+    "description": null,
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": null,
+    "published": "2025-09-10T08:37:06+00:00",
+    "modified": "2026-08-27T06:54:16+00:00"
+  },
+  "complaints": {
+    "title": "Complaints Policy - Credx",
+    "description": null,
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogType": "article",
+    "ogImage": null,
+    "published": "2025-09-10T08:54:51+00:00",
+    "modified": "2026-08-27T06:54:13+00:00"
+  }
+}

@@ -1,0 +1,27 @@
+To: info@credx.co.uk
+Reply-To: sarah@example.com
+From: Credx <info@credx.co.uk>
+Subject: Credx "Get In Touch"
+
+Company:            Example Property Ltd
+Companies House:    12345678
+UK limited company: Yes
+Acting as trustee:  No
+
+Contact:            Sarah Jones
+Email:              sarah@example.com
+Telephone:          07700 900123
+
+Loan purpose:       Auction purchase
+Security type:      Residential investment
+Security address:   12 High Street
+Dartford DA1 1AA
+Amount requested:   £275,000
+Exit strategy:      Refinance onto a buy-to-let mortgage
+
+Detail:             Lot 14 at next month’s auction.
+
+Declaration accepted at submission: Yes
+
+-- 
+This is a notification that a contact form was submitted on your website (Credx https://credx.co.uk).

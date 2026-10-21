@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import AboutIntro from '../components/AboutIntro.astro';
+import WhyChoose from '../components/WhyChoose.astro';
+import Services from '../components/Services.astro';
+import SimpleProcess from '../components/SimpleProcess.astro';
+import Introducing from '../components/Introducing.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getPage } from '../lib/content';
+
+const p = getPage('home');
+const f = p.fields;
+---
+<Base page="home" path={p.path}>
+  <main>
+    <Hero title={f.banner_title} html={f.banner_description} image={f.banner_image} />
+    <AboutIntro title={f.about_title} html={f.about_description} image1={f.about_image_1} image2={f.about_image_2} />
+    <WhyChoose title={f.why_choose_title} image={f.why_choose_image} items={f.why_choose_credx} />
+    <Services items={f.bridging_finance} />
+    <SimpleProcess title={f.our_simple_process_title} html={f.our_simple_process_description} steps={f.our_simple_process_data_box} />
+    <Introducing title={f.introducing_title} html={f.introducing_description} image={f.introducing_image} alt="Narinder Khattoare" />
+    <ContactSection intro={f.form_intro_text} />
+  </main>
+</Base>

@@ -1,0 +1,40 @@
+---
+// Numbered grey step cards, optionally under a heading with a "Check Eligibility" button.
+import { ENQUIRY, type Point } from '../lib/content';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  title?: string;
+  steps: Point[];
+  note?: string;
+  buttonAfter?: boolean;
+}
+const { title, steps, note, buttonAfter = false } = Astro.props;
+---
+<section class="process-steps">
+  <div class="container">
+    {title && (
+      <div class="head-row" style="--cols:7">
+        <Reveal type="up" class="sec-heading"><h2>{title}</h2></Reveal>
+        <Reveal type="up"><a href={ENQUIRY} class="thm-btn-1">Check Eligibility</a></Reveal>
+      </div>
+    )}
+    <div class="steps">
+      {steps.map((s, i) => (
+        <Reveal delay={300 + i * 100} class="step">
+          <div class="step-num">{i + 1}</div>
+          <div class="step-cnt">
+            <h3 set:html={s.title} />
+            <p set:html={s.description} />
+          </div>
+        </Reveal>
+      ))}
+      {note && (
+        <Reveal delay={800} class="step-note"><p set:html={note} /></Reveal>
+      )}
+      {buttonAfter && (
+        <Reveal delay={900} class="steps-cta"><a href={ENQUIRY} class="thm-btn-1">Check Eligibility</a></Reveal>
+      )}
+    </div>
+  </div>
+</section>

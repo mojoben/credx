@@ -1,0 +1,97 @@
+---
+// The enquiry form from the old Contact Form 7 "Get in Touch" form. Field names are kept so
+// the emails read the same. Posts to /api/enquiry/ (src/pages/api/enquiry.ts);
+// src/scripts/enquiry.ts handles validation and the AJAX submit.
+import { RECAPTCHA_SITE_KEY } from '../lib/config';
+import { PURPOSES, PROPERTY_TYPES as TYPES, MIN_LOAN } from '../lib/enquiry/rules';
+const uid = Math.random().toString(36).slice(2, 7);
+const id = (n: string) => `${n}-${uid}`;
+---
+<form class="enquiry" action="/api/enquiry/" method="post" novalidate data-enquiry data-recaptcha={RECAPTCHA_SITE_KEY || undefined}>
+  <div class="enquiry-cols">
+    <div class="enquiry-col">
+      <div class="field half">
+        <label class="visually-hidden" for={id('name')}>Your name</label>
+        <input class="form-control" id={id('name')} name="your-name" type="text" placeholder="Your name" autocomplete="name" required />
+      </div>
+      <div class="field half">
+        <label class="visually-hidden" for={id('email')}>Email address</label>
+        <input class="form-control" id={id('email')} name="your-email" type="email" placeholder="Email address" autocomplete="email" required />
+      </div>
+      <div class="field half">
+        <label class="visually-hidden" for={id('tel')}>Contact Number</label>
+        <input class="form-control" id={id('tel')} name="contact-number" type="text" placeholder="Contact Number" autocomplete="tel" inputmode="tel" required />
+      </div>
+      <div class="field half">
+        <label class="visually-hidden" for={id('company')}>Borrowing company legal name</label>
+        <input class="form-control" id={id('company')} name="company-name" type="text" placeholder="Borrowing company legal name" autocomplete="organization" required />
+      </div>
+      <div class="field">
+        <label class="visually-hidden" for={id('number')}>Companies House number</label>
+        <input class="form-control" id={id('number')} name="company-number" type="text" placeholder="Companies House number" required />
+      </div>
+      <fieldset class="field">
+        <legend class="form-check-label">Is the proposed borrower a UK limited company? <span class="required">*</span></legend>
+        <div class="radio-row">
+          <label><input type="radio" name="is-limited-company" value="Yes" required /><span>Yes</span></label>
+          <label><input type="radio" name="is-limited-company" value="No" /><span>No</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="form-check-label">Is the borrower acting as a trustee? <span class="required">*</span></legend>
+        <div class="radio-row">
+          <label><input type="radio" name="is-trustee" value="Yes" required /><span>Yes</span></label>
+          <label><input type="radio" name="is-trustee" value="No" /><span>No</span></label>
+        </div>
+      </fieldset>
+      <div class="field half">
+        <label class="visually-hidden" for={id('purpose')}>Loan purpose</label>
+        <select class="form-select" id={id('purpose')} name="loan-purpose" required>
+          <option value="">Select loan purpose</option>
+          {PURPOSES.map((o) => <option>{o}</option>)}
+        </select>
+      </div>
+      <div class="field half">
+        <label class="visually-hidden" for={id('type')}>Property type</label>
+        <select class="form-select" id={id('type')} name="property-type" required>
+          <option value="">Select property type</option>
+          {TYPES.map((o) => <option>{o}</option>)}
+        </select>
+      </div>
+    </div>
+    <div class="enquiry-col">
+      <div class="field half">
+        <label class="visually-hidden" for={id('address')}>Security property address</label>
+        <textarea class="form-control" id={id('address')} name="security-address" rows="2" placeholder="Security property address" required></textarea>
+      </div>
+      <div class="field half">
+        <label class="visually-hidden" for={id('amount')}>Requested loan amount (£)</label>
+        <input class="form-control" id={id('amount')} name="loan-amount" type="number" min={MIN_LOAN} step="any" placeholder="Requested loan amount (£)" required />
+      </div>
+      <div class="field">
+        <label class="visually-hidden" for={id('exit')}>Expected exit strategy</label>
+        <textarea class="form-control" id={id('exit')} name="exit-strategy" rows="3" placeholder="Expected exit strategy" required></textarea>
+      </div>
+      <div class="field">
+        <label class="visually-hidden" for={id('detail')}>Tell us about the transaction</label>
+        <textarea class="form-control" id={id('detail')} name="let-us" rows="4" placeholder="Tell us about the transaction — property, purpose and proposed exit"></textarea>
+      </div>
+      <div class="field">
+        <label class="check">
+          <input type="checkbox" name="declaration" value="1" required />
+          <span>I confirm this enquiry is made on behalf of a UK limited company or corporate SPV for business or investment purposes. I am not applying for a personal loan, consumer credit or a regulated residential mortgage.</span>
+        </label>
+      </div>
+      <div class="enquiry-actions">
+        <div class="enquiry-submit">
+          <button type="submit" class="thm-btn">Submit</button>
+        </div>
+      </div>
+      {/* spam trap: hidden from people, bots fill it in */}
+      <div class="hp" aria-hidden="true">
+        <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+    </div>
+  </div>
+  <div class="enquiry-response" role="status" aria-live="polite" hidden></div>
+</form>

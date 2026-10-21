@@ -1,0 +1,21 @@
+---
+import type { Point } from '../lib/content';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  points: Point[];
+}
+const { points } = Astro.props;
+---
+<section class="why-credx panel angled skew-top">
+  <div class="container">
+    <div class="why-credx-list">
+      {points.map((p, i) => (
+        <Reveal type="up" delay={300 + i * 100} class="why-credx-cnt">
+          {p.title && <h3 set:html={p.title} />}
+          <p set:html={p.description} />
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
