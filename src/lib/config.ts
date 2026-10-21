@@ -1,7 +1,7 @@
 // Public build-time settings.
 
-/** Google reCAPTCHA v3 site key: the same one credco.co.uk uses. credx.co.uk has to be added
- *  to its domain list in the reCAPTCHA admin console. The matching secret goes in the server
- *  config (deploy/enquiry-config.example.php). Set to '' to turn reCAPTCHA off and rely on the
- *  honeypot and server checks only. */
-export const RECAPTCHA_SITE_KEY = '6LdhQqUtAAAAALCVv9rCiAgMUfj6Slp9ts6PC0My';
+/** Google reCAPTCHA Enterprise site key for credx.co.uk (score-based, invisible). Verified on the
+ *  server through the reCAPTCHA Enterprise API (RECAPTCHA_PROJECT_ID + RECAPTCHA_API_KEY). Its
+ *  allowed domains are set in Google Cloud > Security > reCAPTCHA. Set to '' to turn reCAPTCHA
+ *  off and rely on the honeypot and server checks only. */
+export const RECAPTCHA_SITE_KEY = '6LffXfktAAAAAP1j-A_WcuaJDkP4EeJK-zwGf3B-';

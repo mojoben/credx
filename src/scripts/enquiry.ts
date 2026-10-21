@@ -1,23 +1,24 @@
-// Enquiry form: validates with the same messages Contact Form 7 used, lazy-loads reCAPTCHA v3
-// (invisible, the same key as credco.co.uk) when the form comes near the screen, and submits
-// to /api/enquiry/ (src/pages/api/enquiry.ts) without a page reload.
+// Enquiry form: validates with the same messages Contact Form 7 used, lazy-loads reCAPTCHA
+// Enterprise (invisible, score-based) when the form comes near the screen, and submits to
+// /api/enquiry/ (src/pages/api/enquiry.ts) without a page reload.
 
 import { MESSAGES, RECAPTCHA_ACTION, validate as validateRules } from '../lib/enquiry/rules';
 
+type Recaptcha = {
+  ready: (cb: () => void) => void;
+  execute: (siteKey: string, opts: { action: string }) => Promise<string>;
+};
 declare global {
   interface Window {
-    grecaptcha?: {
-      ready: (cb: () => void) => void;
-      execute: (siteKey: string, opts: { action: string }) => Promise<string>;
-    };
+    grecaptcha?: { enterprise?: Recaptcha };
   }
 }
 
 function loadCaptcha(key: string) {
-  if (document.getElementById('recaptcha-v3')) return;
+  if (document.getElementById('recaptcha')) return;
   const s = document.createElement('script');
-  s.id = 'recaptcha-v3';
-  s.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(key)}`;
+  s.id = 'recaptcha';
+  s.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(key)}`;
   s.async = true;
   document.head.append(s);
 }
@@ -25,10 +26,11 @@ function loadCaptcha(key: string) {
 /** A token for this submission, or undefined if Google's script is blocked or not loaded yet
  *  (the server decides what to do with a missing token). */
 async function captchaToken(key: string): Promise<string | undefined> {
-  if (!window.grecaptcha) return undefined;
+  const g = window.grecaptcha?.enterprise;
+  if (!g) return undefined;
   try {
-    await new Promise<void>((resolve) => window.grecaptcha!.ready(resolve));
-    return await window.grecaptcha!.execute(key, { action: RECAPTCHA_ACTION });
+    await new Promise<void>((resolve) => g.ready(resolve));
+    return await g.execute(key, { action: RECAPTCHA_ACTION });
   } catch {
     return undefined;
   }
